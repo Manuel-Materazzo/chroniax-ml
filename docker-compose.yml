@@ -1,0 +1,8 @@
+services:
+  chroniax-ml:
+    build: .
+    container_name: chroniax_ml
+    command: "--scan_csv ./input/raw_hr_hr.csv --sqlite ./input/chroniax-backup.db --out_pairs ./output/dataset.csv --out_models ./output/models.json --user_id 1 --freq 1min --model pchip"
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output

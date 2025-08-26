@@ -13,7 +13,7 @@ if __name__ == "__main__":
     parser.add_argument("--sqlite", required=True, help="chroniax SQLite database")
     parser.add_argument("--user_id", type=int, default=None, help="Optional userId to filter")
     parser.add_argument("--freq", default="1min", help="Bin size, e.g., 1min or 30S")
-    parser.add_argument("--model", default="pchip", choices=["pchip","isotonic"], help="Calibrator type")
+    parser.add_argument("--model", default="pchip", choices=["pchip", "isotonic"], help="Calibrator type")
     parser.add_argument("--out_pairs", default="dataset.csv", help="Output CSV of paired data with predictions")
     parser.add_argument("--out_models", default="models.json", help="Output JSON of chosen models and metrics")
     args = parser.parse_args()
